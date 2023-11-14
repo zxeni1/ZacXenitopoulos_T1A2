@@ -2,7 +2,7 @@
 
 ### Portfolio Website:
 
-### GitHub Repo:
+### Git Repo: https://github.com/zxeni1/ZacXenitopoulos_T1A2/tree/main
 
 ### Presentation Video: 
 
