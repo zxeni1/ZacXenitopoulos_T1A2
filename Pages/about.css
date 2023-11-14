@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: michroma;
+    background: url(../Images/background-image.jpg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: white;
+    padding: 8px 20px;
+}
+.logo img {
+    width: 150px;
+}
+.menu {
+    display: flex;
+}
+.menu li {
+    padding-left: 30px;
+}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: 0.3s ease-in-out;
+}
+
+.menu li a:hover:after {
+    width: 100%;
+}
+.open-menu, .close-menu {
+    position: absolute;
+    color: black;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {
+    display: none;
+}
+.about {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.all-text {
+    width: 600px;
+    max-width: 100%;
+    padding: 10px;
+}
+.main {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.all-text h4 {
+    font-size: 2rem;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.all-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.all-text p {
+    font-size: 1.2rem;
+    line-height: 25px;
+    margin-bottom: 35px;
+}
+.btn {
+    display: flex;
+    gap: 2rem;
+    padding: 0rem 1rem; 
+    justify-content: center;
+}
+.btn button {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+.contact-me {
+    background-color: white;
+    color: black;
+    font-family: michroma;
+    font-size: 0.8rem; 
+}
+.btn button:hover {
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+footer {
+    background-color: white;
+    padding: 35px;
+    text-align: center;
+}
+.social {
+    display: flex;
+    justify-content: center;
+}
+.social a {
+    margin: 0 60px;
+    color: black;
+    font-size: 24px;
+}
+@media (max-width: 610px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 35%;
+        height: 95vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.3s;
+    } 
+    .menu li {
+        margin-top: 40px;
+    }
+    .menu li a {
+        padding: 2px;
+    }
+    .open-menu, .close-menu {
+        display: block;
+    }
+    #check:checked ~ .menu {
+        right: 0;
+    }
+    .about .main img {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .all-text {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    .main {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .all-text h4 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .all-text h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    .all-text p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    .btn {
+        display: flex;
+        gap: 1rem;
+        padding: 0rem 1rem; 
+        justify-content: center;
+    }
+    .btn button {
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
+}
