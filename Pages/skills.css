@@ -9,7 +9,8 @@
 body {
     font-family: michroma;
     background: url(../Images/background-image.jpg);
-
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -87,33 +88,166 @@ body {
     display: none;
 }
 
-@media(max-width: 610px) {
-
-   .menu {
-    flex-direction: column;
+.skills_section{
+    width: 100%;
+    height: 100vh;
+    padding: 0px 13%;
+    background-color: rgba(0, 0, 0, 0.082);
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+.skills_head{
+    width: 100%;
+    margin-bottom: 100px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.skills_head h2{
+    font-size: 3rem;
+}
+
+.skills_head p {
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+.skills_head h2 span{
+    color: rgb(3, 111, 252);
+    font-size: 3rem;
+}
+.skills_main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+    margin-top: -50px;
+}
+.skills_main .skill_bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 10px;
+}
+.skill_bar .info p:nth-child(2){
+    font-weight: 500;
+}
+.skill_bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.144);
+    border-radius: 25px;
+    margin-top: 5px;
+    position: relative;
+}
+.skill_bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(3, 111, 252);
+    border-radius: 25px;
+}
+.skill_bar .bar .html{
+    width: 70%;
+    animation: html 2s;
+}
+@keyframes html {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+.skill_bar .bar .css{
+    width: 70%;
+    animation: css 2s;
+}
+@keyframes css {
+    0%{
+        width: 0%;
+    }100%{
+        width: 70%;
+    }
+}
+.skill_bar .bar .git{
+    width: 60%;
+    animation: git 2s;
+}
+@keyframes git {
+    0%{
+        width: 0%;
+    }100%{
+        width: 60%;
+    }
+}
+.skill_bar .bar .sql{
     width: 35%;
-    height: 95vh;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 100;
-    background-color: rgb(255, 255, 255);
-    transition: all 0.3s;
-   } 
-   .menu li {
-    margin-top: 40px;
-   }
-   .menu li a {
-    padding: 2px;
-   }
-   .open-menu , .close-menu {
-    display: block;
-   }
-   #check:checked ~ .menu {
-    right: 0;
-   }
+    animation: sql 2s;
+}
+@keyframes sql {
+    0%{
+        width: 0%;
+    }100%{
+        width: 35%;
+    }
+}
+.skill_bar .bar .api{
+    width: 50%;
+    animation: api 2s;
+}
+@keyframes api {
+    0%{
+        width: 0%;
+    }100%{
+        width: 50%;
+    }
+}
+.skill_bar .bar .ms365{
+    width: 85%;
+    animation: ms365 2s;
+}
+@keyframes ms365 {
+    0%{
+        width: 0%;
+    }100%{
+        width: 85%;
+    }
+}
+.skill_bar .bar .figma{
+    width: 65%;
+    animation: figma 2s;
+}
+@keyframes figma {
+    0%{
+        width: 0%;
+    }100%{
+        width: 65%;
+    }
+}
+.skill_bar .bar .photoshop{
+    width: 75%;
+    animation: photoshop 2s;
+}
+@keyframes photoshop {
+    0%{
+        width: 0%;
+    }100%{
+        width: 75%;
+    }
+}
+
+.skills-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    bottom: 250px;
+    font-size: 2.5rem;
+    color: black;
+
 }
 
 footer {
@@ -133,3 +267,44 @@ footer {
     font-size: 24px;
 }
 
+@media(max-width: 700px) {
+    .skills-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    bottom: 125px;
+    font-size: 2.5rem;
+    color: black;
+    }
+}
+
+@media(max-width: 610px) {
+
+    .menu {
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 35%;
+     height: 95vh;
+     position: fixed;
+     top: 0;
+     right: -100%;
+     z-index: 100;
+     background-color: rgb(255, 255, 255);
+     transition: all 0.3s;
+    } 
+    .menu li {
+     margin-top: 40px;
+    }
+    .menu li a {
+     padding: 2px;
+    }
+    .open-menu , .close-menu {
+     display: block;
+    }
+    #check:checked ~ .menu {
+     right: 0;
+    }
+ }

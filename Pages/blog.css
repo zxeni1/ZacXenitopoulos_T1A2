@@ -89,60 +89,6 @@ body {
     display: none;
 }
 
-@media(max-width:610px) {
-
-   .menu {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 35%;
-    height: 95vh;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 100;
-    background-color: rgb(255, 255, 255);
-    transition: all 0.3s;
-   } 
-   .menu li {
-    margin-top: 40px;
-   }
-   .menu li a {
-    padding: 2px;
-   }
-   .open-menu , .close-menu {
-    display: block;
-   }
-   #check:checked ~ .menu {
-    right: 0;
-   }
-   .blog-box {
-    margin: 20px 10px;
-    width: 100%;
-   }
-   #blog {
-    padding: 20px;
-   }
-}
-
-footer {
-    background-color: white;
-    padding: 35px;
-    text-align: center;
-}
-
-.social {
-    display: flex;
-    justify-content: center
-}
-
-.social a {
-    margin: 0 60px;
-    color: black;
-    font-size: 24px;
-}
-
-
 #blog {
     display: flex;
     justify-content: center;
@@ -173,6 +119,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     margin: 20px 0px;
     flex-wrap: wrap;
 }
@@ -205,8 +152,7 @@ footer {
 
 .blog-text span {
  color: blue;
- font-size: 0.9rem;
- margin-bottom: 15px; 
+ font-size: 0.9rem; 
 }
 
 .blog-text , .blog-title {
@@ -231,3 +177,55 @@ footer {
     margin: 20px 0px;
 }
 
+
+footer {
+    background-color: white;
+    padding: 35px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center
+}
+
+.social a {
+    margin: 0 60px;
+    color: black;
+    font-size: 24px;
+}
+@media(max-width:610px) {
+
+    .menu {
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 35%;
+     height: 95vh;
+     position: fixed;
+     top: 0;
+     right: -100%;
+     z-index: 100;
+     background-color: rgb(255, 255, 255);
+     transition: all 0.3s;
+    } 
+    .menu li {
+     margin-top: 40px;
+    }
+    .menu li a {
+     padding: 2px;
+    }
+    .open-menu , .close-menu {
+     display: block;
+    }
+    #check:checked ~ .menu {
+     right: 0;
+    }
+    .blog-box {
+     margin: 20px 10px;
+     width: 100%;
+    }
+    #blog {
+     padding: 20px;
+    }
+ }
