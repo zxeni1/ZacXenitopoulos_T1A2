@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
+        <!--Header compontnet comprising of - short cut image, title name and fontawesome for footer-->
+
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="../Images/Logo.png"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zac Xenitopoulos Portfolio</title>
     <link rel="stylesheet" href="contact.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
+<!--Header, section for contact-->
+
 <body>
+
+    <!--Header-->
+
     <header>
         <nav>
             <ul class="nav-bar">
@@ -26,23 +35,68 @@
         </nav>
     </header>
     <main>
-        <div class="contact-form">
-            <h1>Contact Me!</h1>
+
+        <!--contact me section comprising of 3 diffrent contact details-->
+
+        <section class="contact">
+            <div class="content">
+                <h2>Lets get In touch!</h2>
+                <p>Please reach out to me via the below contact form.<br>I am excited to work with you on your next project!</p>
+            </div>
             <div class="container">
-                <div class="main">
-                    <div class="content">
-                        <h2>Email:14686@coderacademy.edu.au Phone: 0402377292 </h2>
-                        <form method="post">
-                            <input type="text" name="name" placeholder="Enter Your Name">
-                            <input type="email" name="name" placeholder="Enter Your Email">
-                            <textarea name="message" placeholder="Your Message"></textarea>                   
-                            <button type="submit" class="btn">Send <i class="fas fa-paper-plane"></i></button>
-                        </form>
+                <div class="contactinfo">
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>100 Wickham Street,<br>Fortitude Valley, QLD 4006</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>14686@coderacademy.edu.au</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Contact Number</h3>
+                            <p>0400 000 000</p>
+                        </div>
                     </div>
                 </div>
+
+                <!--Input types for contact form-->
+
+                <div class="contactform">
+                    <form>
+                        <h2>Send me a message!</h2>
+                        <div class="inputbox">
+                            <input type="text" name="" required="required">
+                            <span>Full Name</span>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" name="" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputbox">
+                            <textarea required="required"></textarea>
+                            <span>Message</span>
+                        </div>
+                        <div class="inputbox">
+                            <input type="submit" name="" value="Send">
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div> 
+        </section>
+ 
     </main>
+
+    <!--footer - fontawesome links to socials and professional accounts -->
+    
     <footer>
         <div class="social">
             <a href="https://www.instagram.com/zxeni_/?hl=en" target="_blank">

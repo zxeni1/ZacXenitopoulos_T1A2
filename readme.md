@@ -35,7 +35,21 @@ transitions, section transitions (skill graph).
 
 ### Sitemap 
 
+My sitemap consists of logical and simplistic planning to ensure end users and consume the information in and effective manner. Below is a screen shot of my sitemap.
+
+![Zac Xenitopoulos SiteMap ](../ZacXenitopoulos_T1A2/Documents/SiteMapPortfolio.jpg)
+
 ### Screenshots 
+
+Below are screen shots of the content on each page. 
+
+![Home Page ](../ZacXenitopoulos_T1A2/Documents/Home%20Page.jpg)
+![About Page ](../ZacXenitopoulos_T1A2/Documents/about.png)
+![Skills Page ](../ZacXenitopoulos_T1A2/Documents/skills.png)
+![Blog Page ](../ZacXenitopoulos_T1A2/Documents/Blog.png)
+![Contact Page ](../ZacXenitopoulos_T1A2/Documents/contact.png)
+
+
 
 ### Target Audience 
 My Portfolio&#39;s target audience is directed to prospective clients, employers and partners in
@@ -48,3 +62,19 @@ Professionals in human resources: Those in charge of vetting and selecting appli
 jobs in web development within companies.
 
 ### Teck Stack
+My teck stack includes a breakdown of folders used to organise files, photos and pages in simple manner these are broken down below. Other components used were GitHub to keep continuous track of updates along the process of building the portfolio as well as safekeeping and backing up incase of any hardware or application (VS Code) issues. Netlify was used to deploy my portfolio as an accessable website for grading and visability of future job prospects.
+
+#### Documents
+- My CV in pdf
+- Wireframes 
+- Screen shots
+
+#### Images 
+- 5 blog images consisting of projects I have works on in the tech space both from a freelance perspective but also from work and study.
+
+#### Pages 
+- Index.html and Index.css (home page)
+- About.html and About.css 
+- Skills.html and Skills.css
+- Blog.html and Blog.css
+- Contact.html and Contact.css

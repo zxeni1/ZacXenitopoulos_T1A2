@@ -1,3 +1,4 @@
+/*Imported text style from google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 * {
@@ -42,6 +43,7 @@ body {
     position: relative;
     text-transform: uppercase;
 }
+/*drop down nav after*/
 .menu li a::after {
     content: "";
     position: absolute;
@@ -55,6 +57,7 @@ body {
 .menu li a:hover:after {
     width: 100%;
 }
+/*Nav menu open/close*/
 .open-menu , .close-menu {
     position: absolute;
     color: black;
@@ -71,46 +74,121 @@ body {
     top: 20px;
     right: 20px;
 }
+/*Pseudo class for elements selected*/
 #check {
     display: none;
 }
-@media(max-width: 610px) {
-   .menu {
-    flex-direction: column;
-    align-items: center;
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
     justify-content: center;
-    width: 35%;
-    height: 95vh;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 100;
-    background-color: rgb(255, 255, 255);
-    transition: all 0.3s;
-   } 
-   .menu li {
-    margin-top: 40px;
-   }
-   .menu li a {
-    padding: 2px;
-   }
-   .open-menu , .close-menu {
-    display: block;
-   }
-   #check:checked ~ .menu {
-    right: 0;
-   }
-   .contact-form .main {
+    align-items: center;
     flex-direction: column;
-   }
-   .contact-form form {
+}
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+.contact .content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 30px;
-    margin-bottom: 10px;
-   }
-   .content {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-   }
+}
+.container .contactinfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;  
+}
+.container .contactinfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactinfo .box .icon {
+    min-height: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.container .contactinfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactinfo .box .text h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: rgb(3, 111, 252);
+}
+.contactform {
+    width: 40%;
+    padding: 40px;
+    background-color: white;
+}
+.contactform h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.contactform .inputbox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactform .inputbox input, .contactform .inputbox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    resize: none;
+    font-family: michroma;
+}
+.contactform .inputbox span {
+   position: absolute;
+   left: 0;
+   padding: 5px 0;
+   font-size: 0.8rem;
+   margin: 10px 0;
+   pointer-events: none;
+   transition: 0.5s;
+   color: black;
+}
+/*valid/foxus for transitions of text upon input of text*/
+.contactform .inputbox input:focus ~ span, 
+.contactform .inputbox input:valid ~ span
+.contactform .inputbox textarea:focus ~ span, 
+.contactform .inputbox textarea:valid ~ span {
+ font-size: 1rem;
+ transform:  translateY(-20px);   
+
+}
+/*Input type for suibmit button NOT IN USE*/
+.contactform .inputbox input[type="submit"] {
+    width: 100px;
+    background-color: rgb(3, 111, 252);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
 }
 footer {
     background-color: white;
@@ -126,84 +204,55 @@ footer {
     color: black;
     font-size: 24px;
 }
-.contact-form {
-    position: relative;
-    min-height: 100vh;
-    z-index: 0;
-    padding: 30px;
-    justify-content: center;
-    display: grid;
-    grid-template-rows: 1fr auto 1fr;
-}
-.container {
-    max-width: 700px;
-    margin-top: 0 auto;
-}
-.contact-form h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 100px;
-}
+/*Media widths for 990px*/
+@media (max-width: 990px) {
+    .contact {
+        padding: 50px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .container .contactinfo {
+        margin-bottom: 40px;
 
-.contact-form h2 {
-    line-height: 40px;
-    margin-bottom: 5px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;  
+    }
+    .container .contactinfo, .contactform {
+        width: 100%;
+    }
 }
+/*Media widths for 610px*/
+@media only screen and (max-width: 610px){
 
-.contact-form .main {
-    position: relative;
-    display: flex;
-    margin: 30px 0;
-}
-
-.content {
-    flex-basis: 50%;
-    padding: 3em 3em;
-    background: white;
-    box-shadow: 2px 9px 49px -17px rgba(0,0,0,0.1);
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-}
-
-.btn, button, input {
-border-radius: 35px;
-}
-.btn:hover,button:hover {
-    color: black;
-    transition: 0.5s ease;
-}
-.contact-form form {
-    margin: 30px 0;
-}
-.contact-form input, textarea {
-    outline: none;
-    margin-top: 15px;
-    font-stretch: 16px;
-    color: #999;
-    padding: 14px 20px;
-    width: 100%;
-    display: inline-block;
-    box-sizing: border-box;
-    border: none;
-    background-color: rgb(255, 255, 255);
-    transition: 0.5s ease;
-    font-family: michroma;
-    font-size: 1.2rem;
-    text-align: center;
-}
-.contact-form input:focus {
-    background: white;
-    border: 1px solid black;
-}
-.contact-form button {
-    font-size: 1.2rem;
-    color: black;
-    width: 100%;
-    background-color: aqua;
-    font-weight: 600px;
-    transition: 0.5s ease;
-    padding: 14px 15px;
-}
+    .menu {
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 35%;
+     height: 95vh;
+     position: fixed;
+     top: 0;
+     right: -100%;
+     z-index: 100;
+     background-color: rgb(255, 255, 255);
+     transition: all 0.3s;
+    } 
+    .menu li {
+     margin-top: 40px;
+    }
+    .menu li a {
+     padding: 2px;
+    }
+    .open-menu , .close-menu {
+     display: block;
+    }
+    #check:checked ~ .menu {
+     right: 0;
+    }
+    .blog-box {
+     margin: 20px 10px;
+     width: 100%;
+    }
+    #blog {
+     padding: 20px;
+    }
+ }
